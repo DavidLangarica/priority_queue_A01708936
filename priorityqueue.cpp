@@ -32,9 +32,9 @@ class Priority_Queue {
     void sort_child(int);
 
     void push(int);
-
     void pop();
     int top();
+   
     bool empty();
     int size();
     void print();
