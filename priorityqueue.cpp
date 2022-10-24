@@ -52,7 +52,7 @@ void Priority_Queue::sort_parent(int i) {
     int parent = (i - 1) / 2;
 
     // Si el hijo es mayor que el padre
-    if (heap[i] > heap[parent]) {
+    if (heap[i] > heap[parent] && i) {
         // Hacer swap con el hijo y el padre
         swap(heap[i], heap[parent]);
 
@@ -70,19 +70,19 @@ void Priority_Queue::sort_parent(int i) {
 
 void Priority_Queue::sort_child(int i) {
     // Llegar a la posición de los hijos
-    int left = (2 * i);
-    int right = (2 * i + 1);
+    int left_child = (2 * i);
+    int right_child = (2 * i + 1);
 
-    // Se asume que el padre es el valor más alto
+    // Se empieza por la raíz
     int largest = i;
 
     // Comparar si la suposición anterior es correcta con ambos hijos
-    if (heap[i] < heap[left]) {
-        largest = left;
+    if (heap[i] < heap[left_child] && left_child < size()) {
+        largest = left_child;
     }
 
-    if (heap[i] < heap[right]) {
-        largest = right;
+    if (heap[i] < heap[right_child] && right_child < size()) {
+        largest = right_child;
     }
 
     // Si el padre no fue el mayor en los casos anteriores, hacer Swap
