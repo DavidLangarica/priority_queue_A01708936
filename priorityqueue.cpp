@@ -4,7 +4,11 @@
 // Autores: David René Langarica Hernández - A01708936
 // Descripción: Clase priority queue para la actividad 3.2.
 //
-// Recursos utilizados: Basado en la solución del libro 
+// Solución basada en los siguientes recursos:
+//  Mark A. Weiss. (2013). Data Structure & Algorithm Analysis in C++
+//  CS3 Data Structures & Algorithms: https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/Heaps.html
+//  Techie Delight. https://www.techiedelight.com/min-heap-max-heap-implementation-c/
+//
 // =================================================================
 
 #include <iostream>
@@ -40,6 +44,7 @@ class Priority_Queue {
 // Ordena el heap de forma ascendente con base en el padre
 //
 // @param i, posición del elemento recién agregado.
+// @Complexity 0(log_2 n), se aplica recursión.
 // =================================================================
 
 void Priority_Queue::sort_parent(int i) {
@@ -60,6 +65,7 @@ void Priority_Queue::sort_parent(int i) {
 // Ordena el heap de forma ascendente con base en el hijo
 //
 // @param i, posición del elemento recién agregado.
+// @Complexity 0(log_2 n), se aplica recursión.
 // =================================================================
 
 void Priority_Queue::sort_child(int i) {
@@ -92,6 +98,7 @@ void Priority_Queue::sort_child(int i) {
 // los cambios necesarios por el elemento agregado.
 //
 // @param n, número entero para agregar en la lista.
+// @Complexity 0(1), tiempo de entrada constante.
 // =================================================================
 
 void Priority_Queue::push(int n) {
@@ -105,6 +112,8 @@ void Priority_Queue::push(int n) {
 // Saca de la fila priorizada el dato que tiene mayor prioridad
 //
 // @param
+// @Complexity 0(log2n), se aplica recursión.
+// @Complexity 0(1), tiempo de ejecución constante.
 // =================================================================
 
 void Priority_Queue::pop() {
@@ -126,6 +135,7 @@ void Priority_Queue::pop() {
 // Regresa el valor del dato que esta con mayor prioridad en la fila priorizada.
 //
 // @param
+// @Complexity 0(1), tiempo de ejecución constante.
 // =================================================================
 
 int Priority_Queue::top() {
@@ -142,6 +152,7 @@ int Priority_Queue::top() {
 // Regresa un valor booleano diciendo si la fila priorizada esta vacía o tiene datos.
 //
 // @param
+// @Complexity 0(1), tiempo de ejecución constante.
 // =================================================================
 
 bool Priority_Queue::empty() {
@@ -156,6 +167,7 @@ bool Priority_Queue::empty() {
 // Regresa la cantidad de datos que tiene la fila priorizada
 //
 // @param
+// @Complexity 0(1), tiempo de ejecución constante.
 // =================================================================
 
 int Priority_Queue::size() {
@@ -166,6 +178,7 @@ int Priority_Queue::size() {
 // Imprime la fila priorizada
 //
 // @param
+// @Complexity 0(n), depende del número de elementos para impresión.
 // =================================================================
 
 void Priority_Queue::print() {
@@ -177,6 +190,9 @@ void Priority_Queue::print() {
         }
     }
 }
+
+// =================================================================
+// =================================================================
 
 int main() {
     Priority_Queue pq;
