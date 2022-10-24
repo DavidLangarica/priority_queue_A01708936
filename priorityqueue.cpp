@@ -19,7 +19,7 @@ using std::swap;
 using std::vector;
 
 // =================================================================
-// Definition of the Priority_Queue class
+// Definición de la clase Priority_Queue
 // =================================================================
 class Priority_Queue {
    private:
