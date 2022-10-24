@@ -1,6 +1,6 @@
 // =================================================================
 //
-// Archivo: priorityqueue.h
+// Archivo: priorityqueue.cpp
 // Autores: David René Langarica Hernández - A01708936
 // Descripción: Clase priority queue para la actividad 3.2.
 //
